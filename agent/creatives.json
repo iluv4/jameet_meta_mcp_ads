@@ -1,0 +1,55 @@
+{
+  "campaign": {
+    "name": "자밋_트래픽_2026Q2",
+    "objective": "OUTCOME_TRAFFIC",
+    "daily_budget": 20000
+  },
+  "adset": {
+    "name": "자밋_KR_20-39",
+    "optimization_goal": "LINK_CLICKS",
+    "targeting": {
+      "geo_locations": { "countries": ["KR"] },
+      "age_min": 20,
+      "age_max": 39,
+      "targeting_automation": { "advantage_audience": 0 }
+    }
+  },
+  "creatives": [
+    {
+      "name": "jameet_A_today_meeting",
+      "message": "이번 주, 같이 시간 보낼 사람이 있을까? 자밋 '오늘미팅'에서는 오늘 바로 만날 수 있어요. 본인인증과 학교·직장 검증을 마친 회원들과 부담 없는 자연스러운 만남을 시작하세요.",
+      "headline": "검증된 사람과, 오늘 바로 만나는 미팅",
+      "description": "라이프스타일로 연결되는 자만추 플랫폼",
+      "cta": "LEARN_MORE",
+      "link": "https://www.jameet.co.kr/",
+      "image_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zgU8WENBNYEO4lt0oTuMlue5RY/hf_20260611_090350_d82f17d6-5854-4267-8af6-b9fe5ed2efe0.png"
+    },
+    {
+      "name": "jameet_B_group_meeting",
+      "message": "1:1은 부담스럽고, 자만추는 기회가 없고. 자밋엔 친구랑 같이 나가는 '지인 동반 미팅'이 있어요. 어색함은 반으로, 즐거움은 두 배로. 오늘 친구 한 명만 데려오세요.",
+      "headline": "친구랑 같이 나가는 미팅, 자밋",
+      "description": "지인 동반 그룹 미팅부터 1:1까지",
+      "cta": "LEARN_MORE",
+      "link": "https://www.jameet.co.kr/",
+      "image_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zgU8WENBNYEO4lt0oTuMlue5RY/hf_20260611_090353_d51b05c7-9588-413b-b03d-01a0f3d4d362.png"
+    },
+    {
+      "name": "jameet_C_verified_safe",
+      "message": "프로필만 봐서는 알 수 없으니까. 자밋은 본인인증 + 서류·프로필 심사를 통과한 검증된 회원만 가입할 수 있어요. 연락처 기반 지인차단으로 아는 사람을 만날 걱정도 없죠.",
+      "headline": "학교·직장 검증된 회원만 만나세요",
+      "description": "지인차단으로 더 안전한 만남",
+      "cta": "LEARN_MORE",
+      "link": "https://www.jameet.co.kr/",
+      "image_url": "https://d8j0ntlcm91z4.cloudfront.net/user_2zgU8WENBNYEO4lt0oTuMlue5RY/hf_20260611_090355_b7e380d7-e9e0-493c-9ee3-ae5e7d70ba00.png"
+    },
+    {
+      "name": "jameet_D_host_privacy",
+      "message": "내가 만든 미팅에 누군가 신청했어요. 사진 한 장과 짧은 메시지, 그걸로 충분해요. 수락 전까지 프로필은 공개되지 않으니 부담도 없죠. 외모보다, 어떤 시간을 함께 보낼지가 중요하니까.",
+      "headline": "사진 한 장과 메시지로, 라이프스타일이 맞는 사람을",
+      "description": "프로필 미리 공개 NO, 부담 없는 만남",
+      "cta": "LEARN_MORE",
+      "link": "https://www.jameet.co.kr/",
+      "image_url": ""
+    }
+  ]
+}
