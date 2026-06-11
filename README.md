@@ -7,6 +7,7 @@
 | 파일 | 내용 |
 |---|---|
 | `jameet_ad_creatives.md` | 광고 소재 패키지 (소재 4종 카피·이미지 + 릴스 가이드 2종 + 스토리 라인업 + 실행 플랜) |
+| `dating_approval.md` | Meta 데이팅 광고 사전 승인 신청 가이드 (절차 + 제출 초안) |
 | `agent/` | Meta Marketing API 자동 업로드 에이전트 (`agent/README.md` 참고) |
 
 ## 브랜치 규칙
