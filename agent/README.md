@@ -8,15 +8,16 @@ Ads MCP 롤아웃과 무관하게 동작합니다 (Graph API 직접 호출).
 
 ## 1. 액세스 토큰 발급 (최초 1회)
 
-권장: 비즈니스 설정의 시스템 사용자 토큰 (만료 없음)
+집행 계정이 **개인 광고 계정**(`27049951394664152`)이므로 사용자 토큰이 가장 간단합니다:
 
-1. [business.facebook.com](https://business.facebook.com) → 비즈니스 설정 → 사용자 → **시스템 사용자** → 추가
-2. 생성한 시스템 사용자에 **자산 할당**: 광고 계정(`2062013064377322`, 관리 권한) + 자밋 페이지(콘텐츠 게시 권한)
-3. **토큰 생성** → 권한 체크: `ads_management`, `pages_read_engagement`, `business_management`
-4. 토큰을 복사해 `.env`에 저장
+1. [Graph API 탐색기](https://developers.facebook.com/tools/explorer) 접속 → 본인 앱 선택 (없으면 developers.facebook.com에서 비즈니스 유형 앱 1개 생성)
+2. 권한 추가: `ads_management`, `pages_read_engagement`, `pages_show_list`
+3. **Generate Access Token** → 복사해 `.env`에 저장
+4. 탐색기 토큰은 1~2시간 만료이므로, 계속 쓰려면 [액세스 토큰 디버거](https://developers.facebook.com/tools/debug/accesstoken/)에서 "장기 실행 토큰으로 교환" (60일)
 
-간단 테스트용은 [Graph API 탐색기](https://developers.facebook.com/tools/explorer)에서
-같은 권한의 사용자 토큰을 발급해도 됩니다 (1~2시간 만료 주의).
+비즈니스 계정(Jameet, `2062013064377322`)으로 전환할 경우에는 비즈니스 설정 →
+시스템 사용자 토큰(만료 없음)을 권장하며, 시스템 사용자에 광고 계정 + 페이지
+자산 할당이 필요합니다.
 
 ## 2. 설정
 
@@ -37,7 +38,7 @@ python upload_ads.py --activate  # 생성 + 즉시 활성화 (과금 시작!)
 
 ## 4. 게재 전 체크리스트
 
-- [ ] 광고 계정에 결제 수단 등록
+- [x] 광고 계정에 결제 수단 등록 (개인 계정 `27049951394664152` 사용)
 - [ ] Meta 데이팅 광고 사전 승인 획득 (미승인 시 심사 반려)
 - [ ] `creatives.json`의 `jameet_D_host_privacy`에 브랜드 소재 이미지 URL 입력
 - [ ] `--dry-run`으로 카피/타겟팅 최종 확인
