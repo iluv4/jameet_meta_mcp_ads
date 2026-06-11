@@ -39,6 +39,7 @@
 | 설명 (description) | 학교·직장 검증 기반 자만추 앱 |
 | CTA | `INSTALL_MOBILE_APP` (앱 설치 캠페인) / 웹 랜딩이면 `LEARN_MORE` |
 | 이미지 가이드 | 저녁 시간대 활기찬 거리/카페에서 휴대폰을 보며 미소 짓는 20~30대. "오늘미팅" 텍스트 오버레이. 1080×1080 (피드), 1080×1920 (스토리/릴스) |
+| ✅ 생성 이미지 | [1024×1024 PNG](https://d8j0ntlcm91z4.cloudfront.net/user_2zgU8WENBNYEO4lt0oTuMlue5RY/hf_20260611_090350_d82f17d6-5854-4267-8af6-b9fe5ed2efe0.png) — Higgsfield `marketing_studio_image`, job `d82f17d6-5854-4267-8af6-b9fe5ed2efe0` |
 
 ### 소재 B — 부담 제거 앵글 "지인 동반 미팅"
 
@@ -50,6 +51,7 @@
 | 설명 (description) | 지인 동반 그룹 미팅부터 1:1까지 |
 | CTA | `INSTALL_MOBILE_APP` / `LEARN_MORE` |
 | 이미지 가이드 | 2:2 그룹이 펍/보드게임 카페에서 웃는 장면. 친구 동반의 편안함 강조. 밝고 캐주얼한 톤 |
+| ✅ 생성 이미지 | [1024×1024 PNG](https://d8j0ntlcm91z4.cloudfront.net/user_2zgU8WENBNYEO4lt0oTuMlue5RY/hf_20260611_090353_d51b05c7-9588-413b-b03d-01a0f3d4d362.png) — Higgsfield `marketing_studio_image`, job `d51b05c7-9588-413b-b03d-01a0f3d4d362` |
 
 ### 소재 C — 신뢰·안전 앵글 "검증 + 지인차단" (직장인 타겟)
 
@@ -61,6 +63,7 @@
 | 설명 (description) | 지인차단으로 더 안전한 만남 |
 | CTA | `INSTALL_MOBILE_APP` / `LEARN_MORE` |
 | 이미지 가이드 | 깔끔한 오피스룩 인물 + 체크마크/인증 배지 그래픽. "서류 심사 통과 회원만" 텍스트 오버레이. 신뢰감 있는 차분한 톤 |
+| ✅ 생성 이미지 | [1024×1024 PNG](https://d8j0ntlcm91z4.cloudfront.net/user_2zgU8WENBNYEO4lt0oTuMlue5RY/hf_20260611_090355_b7e380d7-e9e0-493c-9ee3-ae5e7d70ba00.png) — Higgsfield `marketing_studio_image`, job `b7e380d7-e9e0-493c-9ee3-ae5e7d70ba00` |
 
 ## Ads MCP 활성화 후 실행 플랜 (모두 PAUSED로 생성 → 검토 후 활성화)
 
@@ -87,7 +90,8 @@
      "promoted_object": "{\"application_id\":\"<APP_ID>\",\"object_store_url\":\"https://play.google.com/store/apps/details?id=jameet2.lusoft.android\"}"
    }
    ```
-4. **소재 3종 생성**: `ads_create_creative` — 위 표의 본문/헤드라인/설명/CTA + `image_url` (이미지 URL 직접 사용 가능, 사전 업로드 불필요)
+4. **소재 3종 생성**: `ads_create_creative` — 위 표의 본문/헤드라인/설명/CTA + 각 소재의 ✅ 생성 이미지 URL을 `image_url`로 전달 (Meta가 서버에서 직접 가져가므로 사전 업로드 불필요)
+   - 이미지는 Higgsfield 계정 라이브러리에도 보관되어 있음 (`show_generations`로 재조회 가능). 텍스트 오버레이("오늘미팅" 등)가 필요하면 디자인 툴에서 추가하거나 Higgsfield로 재생성
 5. **광고 3개 생성**: `ads_create_ad` — 각 소재를 `{"creative_id": "..."}` 로 연결
 6. **미리보기**: `ads_get_ad_preview` (MOBILE_FEED_STANDARD / INSTAGRAM_STORY)
 7. **사용자 최종 확인 후** `ads_activate_entity` 캠페인 → 광고 세트 → 광고 순서로 활성화
